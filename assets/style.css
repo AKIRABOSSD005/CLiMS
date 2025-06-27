@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.main {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  transition: all 0.35s ease-in-out;
+  background-color: #fff;
+  min-width: 0;
+}
+
+#sidebar {
+  width: 70px;
+  min-width: 70px;
+  z-index: 1000;
+  transition: all 0.25s ease-in-out;
+  background-color: #1d6325;
+  display: flex;
+  flex-direction: column;
+}
+
+#sidebar.expand {
+  width: 260px;
+  min-width: 260px;
+}
+.sidebar-item a.active {
+  background-color: #17a34a;}
+
+.toggle-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar-logo {
+  margin: auto 0;
+}
+
+.sidebar-logo a {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+  display: none;
+}
+
+#sidebar.expand .sidebar-logo,
+#sidebar.expand a.sidebar-link span {
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.sidebar-nav {
+  padding: 0;
+  flex: 1 1 auto;
+}
+
+a.sidebar-link {
+  padding: 0.625rem 1.625rem;
+  color: #fff;
+  display: block;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-link i,
+.dropdown-item i {
+  font-size: 1.1rem;
+  margin-right: 0.75rem;
+}
+
+a.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+  border-left: 3px solid #1d741b;
+}
+
+.sidebar-item {
+  position: relative;
+}
+
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  background-color: #1d741b;
+  padding: 0;
+  min-width: 15rem;
+  display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown + .sidebar-dropdown {
+  display: block;
+  max-height: 15em;
+  width: 100%;
+  opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+  border: solid;
+  border-width: 0 0.075rem 0.075rem 0;
+  content: "";
+  display: inline-block;
+  padding: 2px;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.4rem;
+  transform: rotate(-135deg);
+  transition: all 0.2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+  transform: rotate(45deg);
+  transition: all 0.2s ease-out;
+}
+
+.name {
+  font-size: 1.2rem;
+  /* Default font size for larger screens */
+}
+
+@media (max-width: 600px) {
+
+  /* Adjust for tablets and smaller devices */
+  .name {
+      font-size: 0.7rem;
+      /* Smaller font size for mobile devices */
+  }
+}
+
+.navbar .nav-item .name {
+  margin-right: 10px;
+  color: #051e82;
+  font-weight: bold;
+}
+.navbar {
+  background-color: #f5f5f5;
+  box-shadow: 0 0 2rem 0 rgba(33, 37, 41, 0.1);
+}
+
+.navbar-expand .navbar-collapse {
+  min-width: 200px;
+}
+
+.custom-navbar .navbar-brand span {
+  color: white;
+  /* Change text color to white */
+  font-family: 'Times New Roman', Times, serif;
+  /* Set font to Times New Roman */
+  font-size: 1.5rem;
+  /* Increase font size */
+
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+}
+
+/* CSS for 3-column layout */
+#content-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px; /* Add some padding around the content */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px; /* Negative margin to offset column padding */
+
+  border-radius: 5px; /* Optional: Add border radius for a rounded appearance */
+}
+
+.col-sm-4 {
+  flex: 0 0 33.333333%;
+  max-width: calc(
+    33.333333% - 30px
+  ); /* Adjusted max-width to accommodate for padding */
+  padding: 0 15px; /* Add some horizontal padding between columns */
+  border-right: 1px solid #ccc; /* Add border to separate columns */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Ensure the last column doesn't have a border on the right */
+.col-sm-4:last-child {
+  border-right: none;
+}
+
+td a.btn:focus {
+  outline: none !important;
+}
+table .th {
+  .table {
+    background-color: rgb(47, 195, 96);
+    border-radius: 10px;
+  }
+
+  .table th {
+    background-color: #17a34a;
+    color: white;
+  }
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #00ff3390;
+  }
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 200px; /* Adjust the width as needed */
+  margin-bottom: 10px; /* Optional: Adjust margin */
+}
+
+.form-control {
+  flex: 1;
+  width: auto; /* Adjust the width as needed */
+}
+
+.btn {
+  height: calc(1.5em + 0.75rem + 2px); /* Match button height with input */
+}
+.custom-navbar {
+  background: linear-gradient(
+    to right,
+    #1d6325,
+    #f0f0f0
+  ); /* Gradient from left to right */
+}
+
+/* Custom CSS for sticky sidebar */
+
+
+/* custom css for main footer */
+
+.sidebar-footer-text {
+  font-size: 1.2rem; /* Base font size for regular screens */
+  text-align: center; /* Center-align the text */
+  white-space: pre-wrap; /* Allows the text to wrap if necessary */
+  margin: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .sidebar-footer-text {
+      font-size: 1rem; /* Larger font size for bigger screens */
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .sidebar-footer-text {
+      font-size: .5rem; /* Smaller font size for small screens */
+  }
+}
+
+
+
+thead {
+  background-color: #f8f9fa;
+}
+
+th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+  #addMembers {
+      margin-bottom: 15px;
+  }
+
+button.btn.btn-primary {
+  margin-right: 5px;
+}
+
+.custom-row-Cards {
+  border: none;
+}
+
+.card {
+  height: 100%;
+  width: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+  transform: translateY(-5px); /* Lift on hover */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for the card body */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.card-body:hover {
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+

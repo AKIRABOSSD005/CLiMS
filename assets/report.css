@@ -1,0 +1,190 @@
+/* Existing styles */
+.report-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 1rem; /* Base font size */
+}
+
+.report-card:hover {
+    transform: scale(1.02);
+}
+
+
+
+.card-header {
+    background-color: #7eb384;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    padding: 16px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.sender-name {
+    font-weight: bold;
+    font-size: 1.2em; /* Base font size */
+    flex: 1 1 auto;
+}
+
+.email-subject {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em; /* Base font size */
+}
+
+.email-preview {
+    color: #555;
+    display: block;
+    margin-top: 8px;
+    overflow-wrap: break-word; /* Added for better text wrapping */
+    font-size: 1em; /* Base font size */
+}
+.navbar .nav-item .name {
+    margin-right: 10px;
+    color: #051e82;
+    font-weight: bold;
+  }
+
+
+/* Center the modal on small screens */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+    margin: 1.75rem auto; /* Centers the modal horizontally */
+}
+
+
+/* Media queries for smaller screens */
+@media (max-width: 767px) {
+    .report-card {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .sender-name {
+        font-size: 1.1em; /* Slightly smaller font size */
+    }
+
+    .email-subject {
+        font-size: 1em; /* Slightly smaller font size */
+    }
+
+    .email-preview {
+        font-size: 0.9em; /* Slightly smaller font size */
+        padding: 0 8px; /* Reduced padding */
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    /* Adjust the modal width and margins for smaller screens */
+    .modal-dialog {
+        margin: 1rem auto; /* Adjusted margin for smaller screens */
+        max-width: 90%; /* Reduce width to fit smaller screens */
+        display: flex;
+        align-items: center;
+        min-height: calc(100% - 1rem);
+       
+    }
+    
+
+    
+}
+
+@media (max-width: 575px) {
+    .report-card {
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+
+    .sender-name {
+        font-size: 1em; /* Further reduced font size */
+    }
+
+    .email-subject {
+        font-size: 0.9em; /* Further reduced font size */
+    }
+
+    .email-preview {
+        font-size: 0.8em; /* Further reduced font size */
+        padding: 0 5px; /* Further reduced padding */
+    }
+
+    /* Further adjust the modal width and margins for very small screens */
+    .modal-dialog {
+        margin: 0.5rem auto; /* Further adjusted margin for very small screens */
+        max-width: 88%; /* Reduce width to fit smaller screens */
+        display: flex;
+        align-items: center;
+        min-height: calc(100% - .5rem);
+       
+        
+    }
+}
+
+
+
+
+.btn {
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+
+
+.report-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-wrapper {
+    position: relative;
+}
+
+.search-bar-wrapper input {
+    padding-right: 40px;
+}
+
+.search-bar-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-header, .modal-footer {
+    background-color: #7eb384;
+    color: white;
+}
+
+.modal-content {
+    border-radius: 10px;
+}

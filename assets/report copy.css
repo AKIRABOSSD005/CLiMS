@@ -1,0 +1,118 @@
+/* Existing styles */
+.report-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-size: 1rem; /* Base font size */
+}
+
+.report-card:hover {
+    transform: scale(1.02);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.sender-name {
+    font-weight: bold;
+    font-size: 1.2em; /* Base font size */
+    flex: 1 1 auto;
+}
+
+.email-subject {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em; /* Base font size */
+}
+
+.email-preview {
+    color: #555;
+    display: block;
+    margin-top: 8px;
+    overflow-wrap: break-word; /* Added for better text wrapping */
+    font-size: 1em; /* Base font size */
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 767px) {
+    .report-card {
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+
+    .sender-name {
+        font-size: 1.1em; /* Slightly smaller font size */
+    }
+
+    .email-subject {
+        font-size: 1em; /* Slightly smaller font size */
+    }
+
+    .email-preview {
+        font-size: 0.9em; /* Slightly smaller font size */
+        padding: 0 8px; /* Reduced padding */
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .report-card {
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+
+    .sender-name {
+        font-size: 1em; /* Further reduced font size */
+    }
+
+    .email-subject {
+        font-size: 0.9em; /* Further reduced font size */
+    }
+
+    .email-preview {
+        font-size: 0.8em; /* Further reduced font size */
+        padding: 0 5px; /* Further reduced padding */
+    }
+}
+
+/* Center the modal on small screens */
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+    margin: 1.75rem auto; /* Centers the modal horizontally */
+}
+
+@media (max-width: 767px) {
+    .modal-dialog {
+        margin: 1rem auto; /* Adjusted margin for smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .modal-dialog {
+        margin: 0.5rem auto; /* Further adjusted margin for very small screens */
+    }
+}

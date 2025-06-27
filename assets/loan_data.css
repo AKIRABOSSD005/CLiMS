@@ -1,0 +1,146 @@
+/* Container for all buttons and search bar */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Align items vertically */
+  gap: 10px;
+  flex-wrap: wrap;
+  /* Allow wrapping on small screens */
+}
+
+/* Ensure upload and print buttons are responsive */
+.upload-loan-button,
+.print-button {
+  font-size: 14px;
+  padding: 5px 10px;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  /* Use flex for alignment */
+  align-items: center;
+  gap: 5px;
+  border-radius: 4px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .upload-loan-button {
+    margin-right: 15px;
+    
+  }
+
+  .upload-loan-button,
+  .print-button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens, stack buttons and search */
+  .button-container {
+    flex-direction: column;
+    gap: 5px;
+    /* Reduce gap on small screens */
+    align-items: stretch;
+    /* Align buttons and input field */
+  }
+
+  .upload-loan-button,
+  .print-button {
+    font-size: 10px;
+    padding: 3px 6px;
+    width: 100%;
+    /* Buttons take full width */
+  }
+
+  .button-text {
+    display: none;
+    /* Hide button text, only icons on small screens */
+  }
+
+  .upload-loan-button i,
+  .print-button i {
+    font-size: 18px;
+  }
+}
+
+/* Search Container Styling */
+.search-container {
+  display: flex;
+  flex-grow: 1;
+  /* Allow the search container to grow and fill space */
+  align-items: center;
+  /* Center items vertically */
+  gap: 5px;
+  /* Add space between input and button */
+}
+
+/* Search Input Styling */
+.search-container input {
+  width: 100%;
+  /* Full width for search bar */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Button Styling for Magnifier */
+.search-container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  /* Adjust button padding */
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.search-container .btn i {
+  font-size: 16px;
+  /* Icon size */
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .search-container input {
+    font-size: 12px;
+    padding: 4px 8px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .search-container .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .search-container .btn i {
+    font-size: 14px;
+    /* Adjust icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    width: 100%;
+    /* Ensure search bar takes full width */
+    flex-direction: row;
+    /* Keep input and button aligned horizontally */
+  }
+
+  .search-container input {
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .search-container .btn {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .search-container .btn i {
+    font-size: 12px;
+    /* Even smaller icon size for extra small screens */
+  }
+}

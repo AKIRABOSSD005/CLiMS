@@ -1,0 +1,116 @@
+
+.report-list-wrapper {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report-list {
+    padding: 10px;
+}
+
+.report-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.report-item:last-child {
+    border-bottom: none;
+}
+
+.report-item:hover {
+    background-color: #f1f1f1;
+}
+
+.report-item .sender-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.report-item .email-subject {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.report-item .email-preview {
+    color: #666;
+    margin: 5px 0;
+}
+
+.report-item .time-date {
+    font-size: 0.9em;
+    color: #999;
+    align-self: flex-end;
+}
+
+
+
+
+
+
+    /* Modal Customization */
+    .modal-content {
+        border-radius: 15px; /* Rounded corners */
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+        border: none; /* Remove default border */
+    }
+
+    .modal-header {
+        background-color: #1d6325; /* Dark green header */
+        color: #fff; /* White text color */
+        border-bottom: none; /* Remove default header border */
+        border-radius: 15px 15px 0 0; /* Rounded top corners */
+        padding: 20px; /* Increase padding */
+    }
+
+    .modal-title {
+        font-size: 1.5rem; /* Larger title font */
+        font-weight: bold; /* Bold title */
+    }
+
+    .modal-body {
+        padding: 20px; /* Add padding to the modal body */
+        font-size: 1rem; /* Adjust font size */
+        line-height: 1.6; /* Improve readability */
+        background-color: #f9f9f9; /* Light gray background for contrast */
+        border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    }
+
+    .modal-footer {
+        border-top: none; /* Remove default footer border */
+        padding: 15px; /* Adjust padding */
+        background-color: #f9f9f9; /* Match body background */
+        border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+    }
+
+    .btn-close {
+        background-color: transparent;
+        border: none;
+        font-size: 1.2rem;
+        color: white;
+        opacity: 0.9;
+    }
+
+    .btn-close:hover {
+        color: white;
+        opacity: 1;
+    }
+
+    /* Adjust button style in the footer */
+    .btn-secondary {
+        background-color: #1d6325;
+        border-color: #1d6325;
+        color: white;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn-secondary:hover {
+        background-color: #14511b; /* Darker hover effect */
+        border-color: #14511b;
+    }
